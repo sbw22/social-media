@@ -1,10 +1,27 @@
-.container {
+main {
+    border: solid blue 4px;
     display: flex;
-    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.scrollingBox1 {
+    height: 1000px;
+    max-width: fit-content;
+    margin-top: 50px;
     
     align-items: center;
     justify-content: center;
+    border: solid red 4px;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 21%;
     
+    
+    align-items: center;
+    justify-content: center; 
 }
 
 .container>img{
@@ -12,7 +29,8 @@
     margin: 10px;
 }
 
-
-main {
-    height: 1000px;
+h1 {
+    margin: 20px;
 }
+
+

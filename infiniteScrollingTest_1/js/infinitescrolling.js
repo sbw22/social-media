@@ -15,24 +15,24 @@
 
                 const viewportHeight = document.documentElement.clientHeight;
 
-                function createContainer() {
+                function createContainer() { //creates the container(row) that the images will be placed inside
                     const section = document.createElement('section');
                     section.setAttribute('class', 'container');
                     return section;
                 }
-                function createImageElement(img) {
+                function createImageElement(img) { //creates an image ELEMENT that is put into the container, not just a normal, simple, primitive image
                     const imgEl = document.createElement('img');
                     imgEl.setAttribute('src', img);
                     imgEl.setAttribute('width', 200);
                     return imgEl;
                 }
                 function getRandomImage(){
-                    return images[ Math.floor (Math.random() * images.length ) ];
+                    return images[ Math.floor (Math.random() * images.length ) ]; //gets random image
                 }
-                function createPictureRow() {
+                function createPictureRow() { //makes a row with random picures
                     const section = createContainer();
                     // four images per row
-                    for (let i=0; i<4; i++){
+                    for (let i=0; i<1; i++){
                         const img = getRandomImage();
                         const imgEl = createImageElement(img);
                         section.appendChild(imgEl);
@@ -41,10 +41,10 @@
 
                 }
 
-                const main = document.querySelector('main');
+                const scrollingBox = document.querySelector('.scrollingBox1'); //creates a variable for 'scrollingBox' div
 
                 for (let i=0; i<5; i++){
-                    main.appendChild(createPictureRow());
+                    scrollingBox.appendChild(createPictureRow()); //creates a box of 5 rows
                 }
 
                 //on scroll
@@ -52,19 +52,19 @@
 
                 //see if scrolled position is greater than or equal to age height
 
-                const scrolledY = window.scrollY;
-                const pageHeight = document.documentElement.scrollHeight;
+                const scrolledY = window.scrollY; //the value the user has scrolled to
+                const pageHeight = document.documentElement.scrollHeight; //the height of the document/page
 
-                const scrolledToEnd = (scrolledY + viewportHeight) >= pageHeight;
+                const scrolledToEnd = (scrolledY + viewportHeight + 1000) >= pageHeight; //checks to see if user has scrolled to the bottom of the page. (The extra 1000 value makes the next few images load smoother because the new image generation triggers when user is higher up in the webpage.).
 
                 
                 console.log(scrolledY);
 
-                console.log(scrolledToEnd);
+                //console.log(scrolledToEnd);
 
-                //if yes append picture group to the DOM
+                //if yes append picture group to the DOM (if user has scrolled to the bottom of the page, create new rows of images)
                 if (scrolledToEnd){
-                    main.appendChild(createPictureRow());
+                    scrollingBox.appendChild(createPictureRow());
                 }
                 })
              
