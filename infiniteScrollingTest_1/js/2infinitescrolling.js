@@ -10,10 +10,14 @@
                 const rawLink = [
                     //<a class="twitter-timeline" href="https://twitter.com/rPrequelMemes?ref_src=twsrc%5Etfw">Tweets by rPrequelMemes</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>,
                    // <a class="twitter-timeline" href="https://twitter.com/fasc1nate?ref_src=twsrc%5Etfw">Tweets by fasc1nate</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  // <a class="twitter-timeline" data-width="500" href="https://twitter.com/SportsCenter?ref_src=twsrc%5Etfw">Tweets by SportsCenter</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  // <a class="twitter-timeline" data-width="500" href="https://twitter.com/NBA_Jayhawks?ref_src=twsrc%5Etfw">Tweets by NBA_Jayhawks</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 ]
                 const anchorsHref = [
                 'https://twitter.com/rPrequelMemes?ref_src=twsrc%5Etfw',
-                'https://twitter.com/fasc1nate?ref_src=twsrc%5Etfw'
+                'https://twitter.com/fasc1nate?ref_src=twsrc%5Etfw',
+                'https://twitter.com/SportsCenter?ref_src=twsrc%5Etfw',
+                'https://twitter.com/NBA_Jayhawks?ref_src=twsrc%5Etfw'
                 ]
                 
                 //img = a
