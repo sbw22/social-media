@@ -1,9 +1,16 @@
-  
+//This is the java page that adds images to the social media page
+            
             window.onload = function() {
-
+                let redWidth = document.querySelector(".scrollingBox1").offsetWidth;
+                console.log(redWidth);
+                
+                
+                
+                
+                
                 const images = [
-                'https://images.unsplash.com/photo-1553531384-cc64ac80f931?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80',
-                'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzhMLsukot0pIAV_EUfyn_h_9_7qFswWxXcmMaicokXlxnoy-pCECr9Ukbbv9zh7l8okI:https://keyhole.co/wp-content/uploads/2022/12/Kitkat.png&usqp=CAU',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFMfcSXQNGkS7ebcn83e_4Eb2q_CTcNG2Ih6njVbPL_b5fc77jCdMj2jbvM37JG-NCS6s:https://i.chzbgr.com/full/9723890944/h86DC3B3F/energy-into-2023-and-dont-rain-on-his-holiday-parade-826-pm-1123-bellevue-pa-325k-views-4696-likes&usqp=CAU',
                 'https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80',
                 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
                 'https://images.unsplash.com/photo-1556703588-6eae2585e025?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
@@ -11,6 +18,8 @@
                 'https://images.unsplash.com/photo-1509909756405-be0199881695?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
                 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
                 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80',
+                
+
                 ]
 
                 const viewportHeight = document.documentElement.clientHeight;
@@ -23,15 +32,20 @@
                 function createImageElement(img) { //creates an image ELEMENT that is put into the container, not just a normal, simple, primitive image
                     const imgEl = document.createElement('img');
                     imgEl.setAttribute('src', img);
-                    imgEl.setAttribute('width', 200);
+                    imgEl.setAttribute('width', redWidth);
                     return imgEl;
+                    /*function setImageWidth(redWidth){
+                        imgEl.setAttribute('width', redWidth);
+                    } */
                 }
+                
+
                 function getRandomImage(){
                     return images[ Math.floor (Math.random() * images.length ) ]; //gets random image
                 }
                 function createPictureRow() { //makes a row with random picures
                     const section = createContainer();
-                    // four images per row
+                    // four images per row (changed it to 1)
                     for (let i=0; i<1; i++){
                         const img = getRandomImage();
                         const imgEl = createImageElement(img);
@@ -39,6 +53,17 @@
                     }
                     return section;
 
+                }
+                window.onresize = function(event){  //changes size of images on window resize
+                    const imgEl = document.querySelectorAll("img"); //this is an array
+                    redWidth = document.querySelector(".scrollingBox1").offsetWidth;
+                    for(let i = 0; i < imgEl.length; i++){ //loops through the array of images to individually change the size of each one
+                        if (redWidth > 500){
+                            break;
+                        }
+                        imgEl[i].setAttribute('width', redWidth);
+                    }
+                    
                 }
 
                 const scrollingBox = document.querySelector('.scrollingBox1'); //creates a variable for 'scrollingBox' div
@@ -67,7 +92,10 @@
                     scrollingBox.appendChild(createPictureRow());
                 }
                 })
-             
-            
+                
+                let imageWidth = redWidth;
+                /* get image element */
+
+                
             
             }

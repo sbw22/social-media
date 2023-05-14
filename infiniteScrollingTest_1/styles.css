@@ -1,20 +1,69 @@
-main {
+main {/*main page of the website (has the big three important elements in it)*/
     border: solid blue 4px;
     display: flex;
     justify-content: center;
+    flex: 1 2 1;
+    
+    
 }
 
-.scrollingBox1 {
+.third { /* class that represents the big three boxes in main*/
+    
+}
+
+.scrollingBox1 { /*main div where the scrolling box is*/
+    /*display: flex;*/
+    /*flex-direction: column; */
     height: 1000px;
-    max-width: fit-content;
-    margin-top: 50px;
+    max-width: 40%;
+    min-width: 30%;
+    margin-top: 150px;
+    /*margin-left: 50px;
+    margin-right: 50px; */
+    
     
     align-items: center;
     justify-content: center;
     border: solid red 4px;
 }
 
-.container {
+.userNav { /*left box that holds the multiple tabs for user info*/
+    height: 1000px;
+    margin-top: 25px;
+    margin-left: 25px; 
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    border: solid green 4px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    
+}
+
+.explore { /*right box that holds all the tabs for exploration of the site*/
+    height: 1000px;
+    margin-top: 25px;
+    margin-right: 25px;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    border: solid purple 4px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    
+}
+
+.outside {
+
+}
+
+/*.container {
     display: flex;
     flex-flow: row wrap;
     flex: 1 21%;
@@ -22,7 +71,7 @@ main {
     
     align-items: center;
     justify-content: center; 
-}
+} */
 
 .container>img{
     flex: 1 21%;
@@ -32,5 +81,4 @@ main {
 h1 {
     margin: 20px;
 }
-
 
