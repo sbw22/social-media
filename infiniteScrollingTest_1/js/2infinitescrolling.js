@@ -82,22 +82,25 @@
                         const exploreTitle = document.createElement('h2');
                         //exploreTitle.setAttribute('EXPLORE PAGE')
                         explore.appendChild(exploreTitle);
+                        exploreTitle.setAttribute('class', 'exploreHeader')
+                        h2_0 = document.querySelector('.exploreHeader').innerHTML = "EXPLORE PAGE";
+
                         biggerThan750 = 1;
                     }
                     
                     const aEl = document.querySelectorAll('.twitter-timeline'); //this is an array
-                    redWidth = document.querySelector(".scrollingBox1").offsetWidth;
+                    /*if(window.innerWidth > 750){
+                        redWidth = 10;
+                    } else{
+                        redWidth = document.querySelector(".scrollingBox1").offsetWidth;
+                    }*/
                     for(let i = 0; i < aEl.length; i++){ //loops through the array of images to individually change the size of each one
                         //if (redWidth > 500){
                         //    break;
                         //}
                         aEl[i].setAttribute('data-width', redWidth);
-                    }
-                    
-                    
+                    }    
                 } 
-
-                
 
                 const scrollingBox = document.querySelector('.scrollingBox1'); //creates a variable for 'scrollingBox' div
 

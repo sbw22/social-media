@@ -55,6 +55,23 @@
 
                 }
                 window.onresize = function(event){  //changes size of images on window resize
+                    
+                    /*if (window.innerWidth < 750 && biggerThan750 == 1){
+                        const exPage = document.querySelector(".explore");
+                        exPage.remove();
+                        biggerThan750 = 0;
+                    }
+                    if(window.innerWidth > 750 && biggerThan750 == 0){
+                        const explore = document.createElement('div');
+                        explore.setAttribute('class', 'explore');
+                        const main = document.querySelector('main');
+                        main.appendChild(explore)
+                        const exploreTitle = document.createElement('h2');
+                        //exploreTitle.setAttribute('EXPLORE PAGE')
+                        explore.appendChild(exploreTitle);
+                        biggerThan750 = 1;
+                    }*/
+                    
                     const imgEl = document.querySelectorAll("img"); //this is an array
                     redWidth = document.querySelector(".scrollingBox1").offsetWidth;
                     for(let i = 0; i < imgEl.length; i++){ //loops through the array of images to individually change the size of each one
