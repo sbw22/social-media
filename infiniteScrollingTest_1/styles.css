@@ -1,10 +1,14 @@
+html {
+    background-color: #6699cc;
+
+}
+
 main {/*main page of the website (has the big three important elements in it)*/
-    border: solid blue 4px;
     display: flex;
     justify-content: center;
     flex: 1 2 1;
-    
-    
+    background-color: #6699cc;
+  
 }
 
 .third { /* class that represents the big three boxes in main*/
@@ -19,48 +23,61 @@ main {/*main page of the website (has the big three important elements in it)*/
     min-width: 30%;
     margin-top: 150px;
     /*margin-left: 50px;
-    margin-right: 50px; */
-    
+    margin-right: 50px; */ 
     
     align-items: center;
     justify-content: center;
-    border: solid red 4px;
 }
 
 .userNav { /*left box that holds the multiple tabs for user info*/
-    height: 1000px;
+    /*display: flex;
+    flex-wrap: wrap;*/
     margin-top: 25px;
     margin-left: 25px; 
-    width: 25%;
+    /*width: 25%;*/
     align-items: center;
     justify-content: center;
-    border: solid green 4px;
     position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
+    background-color: #6699cc;
+}
 
+.explore,.userNav{
+    border: solid #525252 2px;
+    border-radius: 15px;
+    font-family: 'verdana';
+    height: 675px;
+    
+}
+
+.userNavH2{
+    padding-left: 20px;
+}
+
+li{
+    margin-bottom: 10px;
+    font-size: 20px;
     
 }
 
 .explore { /*right box that holds all the tabs for exploration of the site*/
-    height: 1000px;
     margin-top: 25px;
     margin-right: 25px;
     width: 25%;
     align-items: center;
     justify-content: center;
-    border: solid purple 4px;
     position: fixed;
     right: 0;
     top: 0;
     bottom: 0;
-
+    background-color: #87b2dc;
     
 }
 
 .outside {
-
+    background-color: #87b2dc;
 }
 
 /*.container {

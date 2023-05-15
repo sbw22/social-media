@@ -69,6 +69,9 @@
 
                 }
                 let biggerThan750 = 1;
+                let navPage = document.querySelector(".userNav");
+                navPage.style.width = "25%";
+
                 window.onresize = function(event){  //changes size of images on window resize
                     console.log(window.innerWidth);
                     
@@ -77,6 +80,11 @@
                         const exPage = document.querySelector(".explore");
                         exPage.remove();
                         biggerThan750 = 0;
+                        const scrollBox = document.querySelector(".scrollingBox1");
+                        scrollBox.style.paddingLeft = '150px';
+                        
+                        navPage = document.querySelector(".userNav");
+                        navPage.style.width = "35%";
                     }
                     if(window.innerWidth > 750 && biggerThan750 == 0){
                         const explore = document.createElement('div');
@@ -88,7 +96,10 @@
                         explore.appendChild(exploreTitle);
                         exploreTitle.setAttribute('class', 'exploreHeader')
                         h2_0 = document.querySelector('.exploreHeader').innerHTML = "EXPLORE PAGE";
-
+                        const scrollBox = document.querySelector(".scrollingBox1");
+                        scrollBox.removeAttribute('style');
+                        const navPage = document.querySelector(".userNav");
+                        navPage.style.width = "25%";
                         biggerThan750 = 1;
                     }
                     
