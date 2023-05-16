@@ -5,9 +5,6 @@
                 console.log(redWidth);
                 
                 
-                
-                
-                
                 const images = [
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzhMLsukot0pIAV_EUfyn_h_9_7qFswWxXcmMaicokXlxnoy-pCECr9Ukbbv9zh7l8okI:https://keyhole.co/wp-content/uploads/2022/12/Kitkat.png&usqp=CAU',
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFMfcSXQNGkS7ebcn83e_4Eb2q_CTcNG2Ih6njVbPL_b5fc77jCdMj2jbvM37JG-NCS6s:https://i.chzbgr.com/full/9723890944/h86DC3B3F/energy-into-2023-and-dont-rain-on-his-holiday-parade-826-pm-1123-bellevue-pa-325k-views-4696-likes&usqp=CAU',
@@ -19,7 +16,6 @@
                 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
                 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80',
                 
-
                 ]
 
                 const viewportHeight = document.documentElement.clientHeight;
