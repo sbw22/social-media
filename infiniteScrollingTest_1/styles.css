@@ -57,9 +57,11 @@ main {/*main page of the website (has the big three important elements in it)*/
 }
 
 li{
-    margin-bottom: 10px;
+    padding-top: 30px;
     font-size: 20px;
-    
+}
+ul{
+    color: white;
 }
 
 .explore { /*right box that holds all the tabs for exploration of the site*/
