@@ -12,12 +12,14 @@
                    // <a class="twitter-timeline" href="https://twitter.com/fasc1nate?ref_src=twsrc%5Etfw">Tweets by fasc1nate</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                   // <a class="twitter-timeline" data-width="500" href="https://twitter.com/SportsCenter?ref_src=twsrc%5Etfw">Tweets by SportsCenter</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                   // <a class="twitter-timeline" data-width="500" href="https://twitter.com/NBA_Jayhawks?ref_src=twsrc%5Etfw">Tweets by NBA_Jayhawks</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  //<a class="twitter-timeline" data-width="500" data-theme="dark" href="https://twitter.com/builtformars?ref_src=twsrc%5Etfw">Tweets by builtformars</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 ]
                 const anchorsHref = [
                 //'https://twitter.com/rPrequelMemes?ref_src=twsrc%5Etfw',
                 'https://twitter.com/fasc1nate?ref_src=twsrc%5Etfw',
                 //'https://twitter.com/SportsCenter?ref_src=twsrc%5Etfw',
                 //'https://twitter.com/NBA_Jayhawks?ref_src=twsrc%5Etfw'
+                'https://twitter.com/builtformars?ref_src=twsrc%5Etfw'
                 ]
                 
                 //img = a
@@ -35,6 +37,7 @@
                     const aEl = document.createElement('a');
                     aEl.setAttribute('href', a);
                     aEl.setAttribute('class', 'twitter-timeline')
+                    aEl.setAttribute('data-theme', 'dark')
                     aEl.setAttribute('data-width', redWidth);
                     
                     return aEl;
@@ -131,7 +134,7 @@
                 const scrolledY = window.scrollY; //the value the user has scrolled to
                 const pageHeight = document.documentElement.scrollHeight; //the height of the document/page
 
-                const scrolledToEnd = (scrolledY + viewportHeight + 1000) >= pageHeight; //checks to see if user has scrolled to the bottom of the page. (The extra 1000 value makes the next few images load smoother because the new image generation triggers when user is higher up in the webpage.).
+                const scrolledToEnd = (scrolledY + viewportHeight + 2000) >= pageHeight; //checks to see if user has scrolled to the bottom of the page. (The extra 1000 value makes the next few images load smoother because the new image generation triggers when user is higher up in the webpage.).
 
                 
                 console.log(scrolledY);

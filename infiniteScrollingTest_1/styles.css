@@ -1,13 +1,14 @@
 html {
-    background-color: #6699cc;
+    background-color: #1c2a38;
 
 }
+/*old colors - background = #6699cc. explore background = #87b2dc. */
 
 main {/*main page of the website (has the big three important elements in it)*/
     display: flex;
     justify-content: center;
     flex: 1 2 1;
-    background-color: #6699cc;
+    background-color: #1c2a38;
   
 }
 
@@ -41,7 +42,8 @@ main {/*main page of the website (has the big three important elements in it)*/
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: #6699cc;
+    background-color: #1c2a38;
+    color: white;
 }
 
 .explore,.userNav{
@@ -74,12 +76,13 @@ ul{
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: #87b2dc;
+    background-color: #3a4c5e;
+    color: white;
     
 }
 
 .outside {
-    background-color: #87b2dc;
+    background-color: #1c2a38;
 }
 
 /*.container {
